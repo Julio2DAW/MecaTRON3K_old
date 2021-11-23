@@ -119,7 +119,14 @@ class Vista{
 **/
 class Modelo{
   constructor(){
-      this.palabras = ['En', 'un', 'lugar', 'de', 'La', 'Mancha']
+      this.palabras = [
+                        ['En', 'un', 'lugar', 'de', 'La', 'Mancha'],
+                        ['ju', 'fr', 'fv', 'jm', 'fu', 'jr', 'jv', 'fm'],
+                        ['fre', 'jui', 'fui', 'vie', 'mi', 'mery', 'huy'],
+                        ['juan', 'remo', 'foca', 'dedo', 'cate']
+                      ]      
+      this.puntuacion = 0
+      this.nivel = 0 
   }
   /**
     Devuelve una nueva palabra.
@@ -128,6 +135,30 @@ class Modelo{
   **/
   crearPalabra(){
     return this.palabras[Math.floor(Math.random() * this.palabras.length)]
+  }
+  //Ejercicio 1
+  //Sumar puntos
+  sumarPunto() {
+    this.puntuacion++
+  }
+  //Mostar puntuación
+  mostrarPuntuacion() {
+    console.log(this.puntuacion)
+  }
+
+  //Ejercicio 7
+  //Subir de nivel
+  subirNivel(){
+    this.nivel = 0
+    if(this.puntuacion = 4){
+      this.nivel = 1
+      if(this.puntuacion = 8){
+        this.nivel = 2
+        if(this.puntuacion = 12){
+          this.nivel = 3
+        }
+      }
+    }
   }
 }
 
